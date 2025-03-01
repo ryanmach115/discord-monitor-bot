@@ -8,7 +8,7 @@ import os
 
 # === Configuration ===
 TOKEN = os.getenv("DISCORD_BOT_TOKEN")  # Use Railway environment variable
-CHANNEL_ID = "CHANNEL_ID" # Channel ID from Railway
+CHANNEL_ID = int(os.getenv("CHANNEL_ID", 0))  # Get channel ID from Railway
 CHECK_INTERVAL = 60  # Check every 1 minute
 DATA_FILE = "tracked_docs.json"  # File to store previous versions
 
